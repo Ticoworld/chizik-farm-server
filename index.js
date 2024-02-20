@@ -36,6 +36,8 @@ app.post('/api/admin/register', async (req, res) => {
     res.status(500).json({ status: 'error', error: 'Internal Server Error' });
   }
 });
+
+
 app.post('/api/admin/login', async (req, res) => {
     const admin = await Admin.findOne({ email: req.body.email });
 
